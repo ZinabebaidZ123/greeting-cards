@@ -146,7 +146,7 @@ body{
 }
 .greeting-cards a{
   text-decoration: none;
-  color: #fff;
+  color: rgb(158, 31, 141);
 }
   .front,
   .back{
