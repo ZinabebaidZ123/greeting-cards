@@ -1,0 +1,327 @@
+/* start header section */
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.container-fluid{
+    padding: 0 3rem !important;
+}
+.navbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999999999999999999999999999999;
+}
+.navbar li a{
+    margin: 1rem !important;
+    line-height: 1.8 !important;
+    font-weight: 700 !important;
+    font-size: 1.5rem !important;
+    transition: 1s all;
+
+}
+.navbar li a:hover{
+  border-bottom: 1px solid rgb(218, 124, 171)  !important ;
+  color: rgb(218, 124, 171) !important;
+  
+}
+h2{
+  font-weight: bold;
+  font-size: 3rem;
+  line-height: 1.8;
+  margin: 2rem;
+  color: rgb(218, 124, 171);
+}
+body{
+  
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+
+    background-color:  rgb(112, 112, 189);
+}
+/* hero section style-------------------------------------- */
+.hero-section {
+  height: 100vh;
+  background-image: url('https://img.freepik.com/free-photo/flat-lay-party-decoration-with-balloons-blue-background_23-2148309180.jpg?size=626&ext=jpg&ga=GA1.1.204430769.1673185501&semt=ais');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+}
+
+.hero-title {
+  font-size: 4rem;
+  font-weight: 700;
+  color: rgb(218, 124, 171);
+  margin-top: 4rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-subtitle {
+  font-size: 1.75rem;
+  color: #fff;
+  font-weight: 700;
+
+}
+
+.hero-btn {
+  background-color: #fff;
+  border-color: #fff;
+  color: rgb(218, 124, 171);
+  text-transform: uppercase;
+  padding: 15px 30px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-top: 50px;
+}
+
+.hero-btn:hover{
+  background-color:  rgb(218, 124, 171);
+  color: #fff;
+}
+
+.hero-image {
+  animation-name: float;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-20px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+  .card-container{
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+  }
+/* section{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+} */
+
+/* start greeting-cards section---------------------- */
+.greeting-cards{
+  background: linear-gradient( rgb(235, 250, 252),  rgb(199, 229, 233) );
+  padding: 6rem 3rem;
+}
+  .front,
+  .back{
+    background-size: cover;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.25);
+    border-radius: 10px;
+    background-position: center;
+    -webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    -o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    text-align: center;
+    min-height: 24rem;
+    height: auto;
+    border-radius: 0.75rem;
+    color: #fff;
+    font-size: 1.5rem;
+  }
+
+  .back{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #cedce7;
+    background: -webkit-linear-gradient(45deg,  #cedce7 0%,#596a72 100%);
+    background: -o-linear-gradient(45deg,  #cedce7 0%,#596a72 100%);
+    background: linear-gradient(45deg,  #5e78ee 0%,#ffffff 100%);
+  }
+
+  .front:after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    content: '';
+    display: block;
+    opacity: .6;
+    background-color: #000;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 10px;
+  }
+
+.card-container:hover .front,
+.card-container:hover .back{
+  -webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  -o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+.back{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.inner{
+  -webkit-transform: translateY(-50%) translateZ(60px) scale(0.94);
+          transform: translateY(-50%) translateZ(60px) scale(0.94);
+  top: 50%;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  padding: 2rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: 1px solid transparent;
+  -webkit-perspective: inherit;
+          perspective: inherit;
+  z-index: 2;
+}
+
+.card-container .back{
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.card-container .front{
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.card-container:hover .back{
+-webkit-transform: rotateY(0deg);
+        transform: rotateY(0deg);
+-webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+}
+
+.card-container:hover .front{
+-webkit-transform: rotateY(-180deg);
+        transform: rotateY(-180deg);
+-webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+}
+
+.front .inner p{
+font-size: 2rem;
+margin-bottom: 2rem;
+position: relative;
+}
+
+.front .inner p:after{
+content: '';
+width: 4rem;
+height: 2px;
+position: absolute;
+background: #C6D4DF;
+display: block;
+left: 0;
+right: 0;
+margin: 0 auto;
+bottom: -.75rem;
+}
+
+.front .inner span{
+color: rgba(255,255,255,0.7);
+font-family: 'Montserrat';
+font-weight: 300;
+}
+
+
+/* canvas styling------------------------------------ */
+.your-greeting{
+  background-image: url('https://img.freepik.com/free-photo/pink-balloons-with-copy-space_23-2148992998.jpg?size=626&ext=jpg&ga=GA1.1.204430769.1673185501&semt=ais');
+  background-repeat: no-repeat;
+  background-size: cover;
+ 
+  padding: 6rem 3rem;
+}
+.your-greeting img{
+  position: relative;
+}
+.your-greeting .img-overlay{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+
+}
+.your-greeting input{
+  border: none;
+  outline: none;
+  padding: 6rem 3rem;
+
+}
+.your-greeting button{
+  border: none;
+  outline: none;
+  margin: 0.75rem;
+  padding: 0.75rem 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  color: rgb(187, 16, 73);
+}
+.your-greeting .updateBtn{
+  background-color: rgb(255, 192, 229);
+ 
+}
+.your-greeting .downloadBtn{
+  background-color: rgb(233, 156, 201);
+}
+.your-greeting .text{
+  margin-top: 2rem;
+  padding: 2rem;
+  border:  3px solid #6d093b;
+  border-radius: 1rem;
+  font-size: 1.rem;
+  line-height: 1.7;
+  font-weight: 400;
+}
+@media (max-width:992px){
+  .your-greeting .text{
+    width: 100% !important;
+  }
+  .logo img{
+    width: 100% !important;
+  }
+}
+.your-greeting textarea{
+  padding:1rem 2rem;
+  border-radius: 0.75rem;
+  border: none;
+  outline: none;
+}
+@media (max-width:992px){
+  
+}
+.footer{
+  padding: 3rem;
+  color: #fff;
+  font-weight: bold;
+  background: linear-gradient(45deg , rgb(129, 218, 240) , rgb(236, 59, 207))
+}
