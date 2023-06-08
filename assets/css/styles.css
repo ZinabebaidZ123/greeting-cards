@@ -15,6 +15,10 @@
   width: 100%;
   z-index: 999999999999999999999999999999;
 }
+.navbar .navbar-toggler i{
+  color:rgb(48, 102, 116) !important;
+  font-size: 2rem !important;
+}
 .navbar li a{
     margin: 1rem !important;
     line-height: 1.8 !important;
@@ -139,6 +143,10 @@ body{
 .greeting-cards{
   background: linear-gradient( rgb(235, 250, 252),  rgb(199, 229, 233) );
   padding: 6rem 3rem;
+}
+.greeting-cards a{
+  text-decoration: none;
+  color: #fff;
 }
   .front,
   .back{
