@@ -21,6 +21,7 @@
     font-weight: 700 !important;
     font-size: 1.5rem !important;
     transition: 1s all;
+    color:rgb(48, 102, 116) !important;
 
 }
 .navbar li a:hover{
@@ -42,6 +43,27 @@ body{
     overflow-x: hidden;
 
     background-color:  rgb(112, 112, 189);
+}
+
+@media (min-width:567px) {
+  html{
+        font-size: 13px;
+  }
+
+ 
+}
+@media (min-width:768px){
+  html{
+      font-size: 14px;
+  }
+
+
+}
+@media (min-width:992px){
+  html{
+      font-size: 16px;
+  }
+
 }
 /* hero section style-------------------------------------- */
 .hero-section {
@@ -262,15 +284,19 @@ font-weight: 300;
   padding: 6rem 3rem;
 }
 .your-greeting img{
-  position: relative;
+  /* position: relative;
+  overflow: hidden; */
+  padding: 1rem;
 }
-.your-greeting .img-overlay{
+/* .your-greeting .img-overlay{
   position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 100%;
+
   padding: 2rem;
 
-}
+} */
 .your-greeting input{
   border: none;
   outline: none;
@@ -285,6 +311,12 @@ font-weight: 300;
   line-height: 1.5;
   border-radius: 0.25rem;
   color: rgb(187, 16, 73);
+  cursor: pointer;
+  transition: 1s all;
+}
+.your-greeting button:hover{
+  background-color:rgb(187, 16, 73); 
+  color:#fff;
 }
 .your-greeting .updateBtn{
   background-color: rgb(255, 192, 229);
@@ -298,7 +330,7 @@ font-weight: 300;
   padding: 2rem;
   border:  3px solid #6d093b;
   border-radius: 1rem;
-  font-size: 1.rem;
+  font-size: 1.25rem;
   line-height: 1.7;
   font-weight: 400;
 }
